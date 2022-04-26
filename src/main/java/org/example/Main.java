@@ -88,8 +88,7 @@ public class Main {
     private static <T> String listToJson(List<Employee> list) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
-        Type listType = new TypeToken<List<T>>() {
-        }.getType();
+        Type listType = new TypeToken<List<T>>() {}.getType();
         String json = gson.toJson(list, listType);
         return json;
     }
